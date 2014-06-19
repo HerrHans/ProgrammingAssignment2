@@ -1,7 +1,8 @@
 ## The functions makeCacheMatrix and cacheSolve compute the inverse of an invertible matrix and store the
 ## result in the cache.
 
-## The function makeCacheMatrix takes an invertible matrix as argument and returns a list of functions. If the matrix is changed, it sets the cached inverse to NULL.
+## The function makeCacheMatrix takes an invertible matrix as argument and returns a list of functions.
+## If the matrix is changed, it sets the cached inverse to NULL.
 
 makeCacheMatrix <- function(x = matrix()) {
   inv <- NULL                                     # sets the cached inverse to NULL
@@ -21,8 +22,9 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## The function cacheSolve computes the inverse of the original matrix passed to makeCacheMatrix. It takes the special matrix object (i.e. the list of functions returned by makeCacheMatrix) as argument.
-## It then stores the result in the cache. If the special matrix object is changed by makeCacheMatrix, solveCache 
+## The function cacheSolve computes the inverse of the original matrix passed to makeCacheMatrix. It takes
+## the special matrix object (i.e. the list of functions returned by makeCacheMatrix) as argument. It then
+## stores the result in the cache. If the special matrix object is changed by makeCacheMatrix, solveCache 
 ## will recompute the inverse. If not, it will print out the cached result.
 
 cacheSolve <- function(x, ...) {
